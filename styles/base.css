@@ -1,0 +1,120 @@
+/* === Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap');
+
+/* === Reset and Base Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === Header === */
+header {
+  background-color: #0b3d91;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+#course-title {
+  display: block; /* Required */
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* === Navigation === */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  background-color: #1e56a0;
+  transform: scale(1.05);
+}
+
+/* === Main Content === */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #0b3d91;
+  margin-bottom: 1.5rem;
+}
+
+/* === Cards === */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.card h2 {
+  color: #1e56a0;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin-top: 0.5rem;
+}
+
+/* === Footer === */
+footer {
+  background-color: #0b3d91;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+/* === Responsive Design === */
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
