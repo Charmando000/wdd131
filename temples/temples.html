@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A beautiful album showcasing various temples from around the world.">
+    <meta name="author" content="Armando Fernandez Jara">
     <title>Temple Album</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS Files -->
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
+    <!-- JavaScript File -->
     <script defer src="scripts/temples.js"></script>
 </head>
 <body>
@@ -15,7 +20,7 @@
         <h1>Temple Album</h1>
         <button id="menu" aria-label="Menu">☰</button>
         <nav class="navigation">
-            <a href="#">Home</a>
+            <a href="/index.html">Home</a>
             <a href="#">Old</a>
             <a href="#">New</a>
             <a href="#">Large</a>
@@ -25,21 +30,42 @@
 
     <main class="container">
         <h1>Temples Around the World</h1>
-            <section class="gallery" aria-label="Galería de templos">
-                <figure><img src="images/temple1.jpg" alt="Templo 1"><figcaption>Temple Nigeria</figcaption></figure>
-                <figure><img src="images/temple2.jpeg" alt="Templo 2"><figcaption>Temple Albuquerque</figcaption></figure>
-                <figure><img src="images/temple3.jpeg" alt="Templo 3"><figcaption>Temple Arequipa Peru</figcaption></figure>
-                <figure><img src="images/temple4.jpeg" alt="Templo 4"><figcaption>Temple Asuncion Paraguay</figcaption></figure>
-                <figure><img src="images/temple5.jpeg" alt="Templo 5"><figcaption>Temple Bogota Colombia</figcaption></figure>
-                <figure><img src="images/temple6.jpeg" alt="Templo 6"><figcaption>Temple Campinas Brazil</figcaption></figure>
-                <figure><img src="images/temple7.jpeg" alt="Templo 7"><figcaption>Temple Brigham City Utah</figcaption></figure>
-                <figure><img src="images/temple8.jpeg" alt="Templo 8"><figcaption>Temple Buenos Aires Argentina</figcaption></figure>
-                <figure><img src="images/temple9.jpeg" alt="Templo 9"><figcaption>Temple Sao Paulo Brazil</figcaption></figure>
-            </section>
+            <div class="gallery" aria-label="Galería de templos">
+                <figure><img src="images/temple1.jpg" alt="Templo 1">
+                <figcaption>Temple Nigeria</figcaption></figure>
+
+                <figure><img src="images/temple2.jpeg" alt="Templo 2">
+                <figcaption>Temple Albuquerque</figcaption></figure>
+
+                <figure><img src="images/temple3.jpeg" alt="Templo 3">
+                <figcaption>Temple Arequipa Peru</figcaption></figure>
+                
+                <figure><img src="images/temple4.jpeg" alt="Templo 4">
+                <figcaption>Temple Asuncion Paraguay</figcaption></figure>
+
+                <figure><img src="images/temple5.jpeg" alt="Templo 5">
+                <figcaption>Temple Bogota Colombia</figcaption></figure>
+
+                <figure><img src="images/temple6.jpeg" alt="Templo 6">
+                <figcaption>Temple Campinas Brazil</figcaption></figure>
+
+                <figure><img src="images/temple7.jpeg" alt="Templo 7">
+                <figcaption>Temple Brigham City Utah</figcaption></figure>
+
+                <figure><img src="images/temple8.jpeg" alt="Templo 8">
+                <figcaption>Temple Buenos Aires Argentina</figcaption></figure>
+                
+                <figure><img src="images/temple9.jpeg" alt="Templo 9">
+                <figcaption>Temple Sao Paulo Brazil</figcaption></figure>
+            </div>
     </main>
     <footer>
-        <p>&copy; <span id="year"></span> Temple Album</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
-  </footer>
+        <p>&copy; <span id="currentyear"></span> Armando Fernandez | Paraguay</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+    </script>
 </body>
 </html>
