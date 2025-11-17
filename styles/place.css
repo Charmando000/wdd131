@@ -1,0 +1,190 @@
+/* CSS Variables for Paraguay color scheme (flag colors: red, white, blue) */
+:root {
+    --primary-color: #ed1c24;      /* Red from Paraguay flag */
+    --secondary-color: #002366;    /* Blue from Paraguay flag */
+    --accent-color: #ffffff;       /* White */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --border-color: #e0e0e0;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --font-main: 'Roboto', sans-serif;
+    --spacing-unit: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--accent-color);
+    padding: 2rem var(--spacing-unit);
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+}
+
+.hero {
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+section {
+    background: var(--accent-color);
+    margin: 1.5rem 0;
+    padding: 1.5rem var(--spacing-unit);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+section h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.weather h2::after {
+    content: '';
+    display: none;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-dark);
+    font-size: 1rem;
+}
+
+section ul li:last-child {
+    border-bottom: none;
+}
+
+section ul li strong {
+    color: var(--secondary-color);
+}
+
+footer {
+    background: var(--secondary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 2rem var(--spacing-unit);
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+@media (min-width: 860px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 2rem var(--spacing-unit);
+    }
+
+    .hero {
+        grid-column: 1 / -1;
+        margin: 0;
+    }
+
+    .data,
+    .weather {
+        margin: 0;
+    }
+
+    .weather h2::after {
+        content: '⛅';
+        display: inline-block;
+        margin-left: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section ul li {
+        font-size: 1.1rem;
+        padding: 1rem 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        gap: 2.5rem;
+    }
+
+    header {
+        padding: 2.5rem var(--spacing-unit);
+    }
+
+    section {
+        padding: 2rem var(--spacing-unit);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+@media print {
+    header,
+    footer {
+        background: none;
+        border: 1px solid var(--border-color);
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+}

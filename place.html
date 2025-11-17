@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+    <title>Paraguay</title>
+</head>
+<body>
+    <header>
+        <h1>Paraguay</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 860px)" srcset="images/paraguay-large.webp 1200w" sizes="100vw">
+                <source media="(min-width: 480px)" srcset="images/paraguay-medium.webp 600w" sizes="100vw">
+                <img src="images/paraguay-small.webp" alt="Beautiful landscape of Paraguay with lush green vegetation and natural scenery" class="hero-image" width="1200" height="400">
+                <img src="images/paraguay-medium.webp" alt="Beautiful landscape of Paraguay with lush green vegetation and natural scenery" class="hero-image" width="600" height="200">
+                <img src="images/paraguay-large.webp" alt="Beautiful landscape of Paraguay with lush green vegetation and natural scenery" class="hero-image" width="300" height="100">
+            </picture>
+        </section>
+
+        <section class="data">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 406,752 km²</li>
+                <li><strong>Capital:</strong> Asunción</li>
+                <li><strong>Population:</strong> 7 million</li>
+                <li><strong>Language:</strong> Spanish, Guarani</li>
+                <li><strong>Currency:</strong> Paraguayan Guarani (PYG)</li>
+            </ul>
+        </section>
+
+        <section class="weather">
+            <h2>Weather ⛅</h2>
+            <ul>
+                <li><strong>Temperature:</strong> 8 °C</li>
+                <li><strong>Wind Speed:</strong> 20 km/h</li>
+                <li id="wind-chill"><strong>Wind Chill:</strong> <span id="wind-chill-value">N/A</span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer id="page-footer">
+        <p id="copyright"></p>
+        <p id="last-modified"></p>
+    </footer>
+</body>
+</html>
