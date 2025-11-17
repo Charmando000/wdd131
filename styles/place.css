@@ -105,6 +105,14 @@ section ul li strong {
     color: var(--secondary-color);
 }
 
+/* Weather SVG - Mobile only */
+.weather-svg {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 1rem 0;
+}
+
 footer {
     background: var(--secondary-color);
     color: var(--accent-color);
@@ -138,6 +146,10 @@ footer p {
     .data,
     .weather {
         margin: 0;
+    }
+
+    .weather-svg {
+        display: none;
     }
 
     .weather h2::after {
