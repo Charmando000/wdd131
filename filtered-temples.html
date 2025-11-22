@@ -7,7 +7,8 @@
     <meta name="author" content="Armando Fernandez Jara">
     <title>Temple Album</title>
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <!-- CSS Files -->
     <link rel="stylesheet" href="filtered-temples.css">
@@ -17,7 +18,7 @@
 </head>
 <body>
     <header>
-        <h1>Temple Album</h1>
+        <p class="site-title">Temple Album</p>
         <button id="menu" aria-label="Menu">☰</button>
         <nav class="navigation">
             <a href="#" data-filter="home">Home</a>
@@ -38,9 +39,5 @@
         <p>&copy; <span id="currentyear"></span> Armando Fernandez | Paraguay</p>
         <p id="lastModified"></p>
     </footer>
-    <script>
-        document.getElementById("currentyear").textContent = new Date().getFullYear();
-        document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
-    </script>
 </body>
 </html>

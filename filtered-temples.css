@@ -25,7 +25,7 @@ header {
 }
 
 .navigation {
-  display: none;
+  display: flex;
   flex-direction: column;
   background-color: #3a6ea5;
   position: absolute;
@@ -45,12 +45,8 @@ header {
   background-color: #2e5984;
 }
 
-.navigation.open {
-  display: flex;
-}
-
-.navigation.open {
-  display: flex;
+.navigation:not(.open) {
+  display: none;
 }
 
 /* Main */
