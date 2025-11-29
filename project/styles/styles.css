@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === GLOBAL STYLES === */
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    padding: 0 1rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+body.index {
+    background: linear-gradient(to bottom, #74acdf, #0038a8);
+}
+
+body.paraguay {
+    background: linear-gradient(to bottom, #d80000, white, #0038a8);
+}
+
+body.paraguay header {
+    background-color: #d80000;
+    color: white;
+}
+
+body.argentina {
+    background: linear-gradient(to bottom, #74acdf, white, #74acdf);
+}
+
+body.argentina header {
+    background-color: #74acdf;
+    color: white;
+}
+
+body.brasil {
+    background: linear-gradient(to bottom, #009b3a, #ffdf00, #002776);
+}
+
+body.brasil header {
+    background-color: #009b3a;
+    color: white;
+}
+
+/* === HEADER === */
+header {
+  background-color: #2e5984;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+#menu {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    display: block;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.navigation.open {
+    display: flex;
+    max-height: 400px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+.navigation a:hover {
+    background-color: rgb(red, green, blue);
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+nav a:hover {
+    color: #57cfff;
+}
+
+/* === IMAGES RESPONSIVE === */
+.country-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 1rem auto;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* === CONTENT BLOCKS === */
+.country-info,
+.my-experience,
+.favorite-foods {
+    background: #f7f7f7;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+h2 {
+    margin-bottom: 0.6rem;
+}
+
+h3 {
+    margin-bottom: 0.4rem;
+}
+
+/* === FAVORITE FOOD LIST === */
+.favorite-foods ul {
+    padding-left: 1.3rem;
+}
+
+.favorite-foods li {
+    margin-bottom: 0.4rem;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    margin: 2rem 0;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+}
+footer p {
+    color: #555;
+    font-size: 0.9rem;
+}

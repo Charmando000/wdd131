@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paraguay</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preload" href="./styles/styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"></noscript>
+    <script src="./main/main.js" defer></script>
+</head>
+<body class="paraguay">
+
+    <header>
+        <h1>Paraguay</h1>
+        <button id="menu" aria-label="Menu">☰</button>
+        <nav class="navigation">
+            <a href="index.html">Inicio</a>
+            <a href="paraguay.html">Paraguay</a>
+            <a href="argentina.html">Argentina</a>
+            <a href="brasil.html">Brasil</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="country-img">
+            <img src="images/paraguay.webp" alt="Landscape of Argentina">
+        </div>
+
+    <div class="country-info">
+        <h2>About Paraguay</h2>
+        <p>
+            Paraguay, officially known as the Republic of Paraguay, is a landlocked country located in the heart of South America.
+            It is bordered by Argentina to the south and southwest, Brazil to the east and northeast, and Bolivia to the northwest.
+            The country has a rich cultural heritage influenced by both indigenous Guaraní traditions and Spanish colonial history.
+            Paraguay’s geography is characterized by vast plains, rolling hills, and the Paraguay River that runs through the country.
+            The climate is generally subtropical, with hot summers and mild winters.
+            Paraguay is known for its vibrant music, dance, and festivals, as well as its delicious cuisine that includes dishes like sopa paraguaya and chipa.
+        </p>
+    </div>
+
+    <div class="my-experience">
+        <h2>My Life in Paraguay</h2>
+        <p>
+            I was born and raised in Asunción, the capital city of Paraguay.
+            Growing up in Paraguay gave me a deep appreciation for my country's culture and traditions.
+            I enjoyed participating in local festivals, exploring the beautiful landscapes, and savoring traditional Paraguayan dishes with my family.
+            Living in Paraguay also allowed me to experience the warmth and hospitality of its people.
+            My time in Paraguay has shaped who I am today, and I carry the values and memories from my homeland wherever I go.
+        </p>
+    </div>
+
+</main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Armando Fernandez | Paraguay</p>
+        <p id="lastModified"></p>
+    </footer>
+
+  <script>
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+  </script>
+</body>
+</html>

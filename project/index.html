@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My history in thres countrys</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles-large.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"></noscript>
+    <script src="./main/main.js" defer></script>
+</head>
+<body class="index">
+
+    <header>
+        <h1>My history in three countries</h1>
+        <button id="menu" aria-label="Menu">☰</button>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="paraguay.html">Paraguay</a></li>
+                <li><a href="argentina.html">Argentina</a></li>
+                <li><a href="brasil.html">Brasil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <div class="country-img">
+            <img src="images/paraguay,argentina,brasil.webp" alt="Landscape of Argentina">
+        </div>
+
+        <div class="introduction">
+            <h2>Introduction</h2>
+            <p>I'am Armando Fernandez and i live in this thres country but paraguay
+            is my home country i was born in asuncion paraguay and i lived there for
+            18 years after that i served a mission in argentina for 2 years then i came back
+            to paraguay and lived there for 1 year after that I moved to brazil where now I live
+            </p>
+            <p>In this website i will share my experience living in this thres country
+            and how is the culture the food and the people of each country </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Armando Fernandez | Home</p>
+        <p id="lastModified"></p>
+    </footer>
+
+  <script>
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+  </script>
+</body>
+</html>

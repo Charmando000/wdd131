@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasil</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preload" href="./styles/styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"></noscript>
+    <script src="./main/main.js" defer></script>
+</head>
+<body class="brasil">
+
+    <header>
+        <h1>Brasil</h1>
+        <button id="menu" aria-label="Menu">☰</button>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="paraguay.html">Paraguay</a></li>
+                <li><a href="argentina.html">Argentina</a></li>
+                <li><a href="brasil.html">Brasil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+    <div class="country-img">
+        <img src="images/brasil.webp" alt="Landscape of Brazil">
+    </div>
+
+    <div class="country-info">
+        <h2>About Brazil</h2>
+        <p>
+        Brazil is the largest country in South America and one of the most culturally diverse nations in the world.
+        Known for its rainforests, beaches, music, and vibrant celebrations like Carnaval, Brazil is full of energy.
+        The country speaks Portuguese and has a wide variety of cultures blended from Indigenous, African, and European roots.
+        </p>
+    </div>
+
+    <div class="my-experience">
+        <h2>My Life in Brazil</h2>
+        <p>
+        I moved to Brazil after returning from my mission. Living here has allowed me to experience a new culture,
+        new food, and new people. I enjoy Brazilian hospitality, the food, and the warmth of the people. Brazil
+        has helped me grow and adapt to a new way of life.
+        </p>
+    </div>
+
+</main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Armando Fernandez | Brasil</p>
+        <p id="lastModified"></p>
+    </footer>
+
+  <script>
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argentina</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preload" href="./styles/styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"></noscript>
+    <script src="scripts/argentina.js" defer></script>
+</head>
+<body class="argentina">
+
+    <header>
+        <h1>Argentina</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="paraguay.html">Paraguay</a></li>
+                <li><a href="argentina.html">Argentina</a></li>
+                <li><a href="brasil.html">Brasil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="country-img">
+            <img src="images/argentina.webp" alt="Landscape of Argentina">
+        </div>
+
+
+
+
+    <div class="country-info">
+        <h2>About Argentina</h2>
+        <p>
+        Argentina, officially known as the Argentine Republic, is the second-largest country in South America.
+        It is bordered by Chile to the west, Bolivia and Paraguay to the north, Brazil and Uruguay to the northeast, 
+        and the Atlantic Ocean to the east. The country is known for its diverse landscapes, which range from the snowy 
+        Andes Mountains and the famous Patagonia region to vast grasslands called the Pampas.
+        Argentina has a rich cultural heritage influenced by European immigration, especially from Spain and Italy. 
+        The country is well-known for tango music and dance, passionate soccer culture, and traditional foods like 
+        empanadas, milanesas, and the famous Argentine asado. The capital city, Buenos Aires, is one of the most vibrant 
+        cultural centers in Latin America, offering a mix of modern life and historic architecture.
+        </p>
+    </div>
+
+
+    <div class="my-experience">
+        <h2>My Life in Argentina</h2>
+        <p>
+        I served my mission in Buenos Aires West, also known as MISBAO. 
+        I really appreciated my time in Argentina and I came to love the people there. 
+        They treated me with so much kindness that I considered them like family, and the atmosphere 
+        I shared with them felt truly warm and close. The food they gave us was amazing, and spending 
+        time with the families and members was something I always enjoyed. I also loved drinking mate; 
+        even though we couldn’t share the same cup with others, it was interesting to see how they drank 
+        it no matter the weather—even in extreme heat or during the freezing winter! My mission helped me 
+        grow a lot as a person. I learned to socialize, to talk with people as if they were part of my own 
+        family, and I became more confident because before that I was very shy. I gained many life lessons 
+        during those two years, things I didn’t realize I needed to learn until I was there. To this day, 
+        I miss the people I met. They became like family to me.
+        </p>
+    </div>
+
+
+    <div class="favorite-foods">
+        <h3>My Favorite Argentine Foods</h3>
+        <ul>
+            <li>Empanadas</li>
+            <li>Milanesa</li>
+            <li>Asado</li>
+            <li>Fugazzeta</li>
+            <li>Facturas</li>
+            <li>Choripán</li>
+        </ul>
+    </div>
+
+</main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Armando Fernandez | Paraguay</p>
+        <p id="lastModified"></p>
+    </footer>
+
+  <script>
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+  </script>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/argentina.js" defer></script>
+</body>
+</html>

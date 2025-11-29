@@ -1,0 +1,27 @@
+@media (min-width: 768px) {
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        max-height: none;
+    }
+
+    .navigation ul {
+        display: flex;
+        gap: 1rem;
+    }
+    .navigation a {
+        border: none;
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 767px) {
+    #menu {
+        display: block;
+    }
+}

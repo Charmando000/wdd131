@@ -49,10 +49,6 @@ header {
   display: flex;
 }
 
-.navigation.open {
-  display: flex;
-}
-
 /* Main */
 main {
   max-width: 100%;
