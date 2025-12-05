@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - Armando</title>
+    <meta name="description" content="Contact form to reach Armando about travel stories, images, and collaborations.">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./main/main.js" defer></script>
+    <script src="./main/contact.js" defer></script>
+  </head>
+  <body class="contact">
+    <header>
+      <h1>Contact</h1>
+      <button id="menu" aria-label="Menu">☰</button>
+      <nav class="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="paraguay.html">Paraguay</a></li>
+          <li><a href="argentina.html">Argentina</a></li>
+          <li><a href="brasil.html">Brazil</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-panel">
+        <h2>Contact me</h2>
+        <p>If you want to reach me about my travel stories or ask for permission to use an image, send a message here.</p>
+
+        <form id="contactForm" novalidate>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required minlength="2">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+
+        <div id="contactStatus" aria-live="polite" style="margin-top:1rem;color:green"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="currentyear"></span> Armando Fernandez | Contact</p>
+      <p id="lastModified"></p>
+      <p><a href="references.html">References / Credits</a> | <a href="index.html">Back</a></p>
+    </footer>
+  </body>
+</html>

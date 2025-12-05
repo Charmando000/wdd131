@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Argentina</title>
+    <meta name="description" content="Personal memories and experiences from living and serving in Argentina — food, culture and daily life.">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="preload" href="./styles/styles.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"></noscript>
-    <script src="scripts/argentina.js" defer></script>
+    <!-- scripts loaded at the end of body -->
 </head>
 <body class="argentina">
 
     <header>
         <h1>Argentina</h1>
-        <nav>
+        <button id="menu" aria-label="Menu">☰</button>
+        <nav class="navigation" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="paraguay.html">Paraguay</a></li>
                 <li><a href="argentina.html">Argentina</a></li>
-                <li><a href="brasil.html">Brasil</a></li>
+                <li><a href="brasil.html">Brazil</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
 
-        <div class="country-img">
-            <img src="images/argentina.webp" alt="Landscape of Argentina">
+            <div class="country-img">
+                <img loading="lazy" src="images/argentina.webp" alt="Landscape of Argentina">
         </div>
 
 
@@ -81,15 +83,16 @@
 </main>
 
     <footer>
-        <p>&copy; <span id="currentyear"></span> Armando Fernandez | Paraguay</p>
+        <p>&copy; <span id="currentyear"></span> Armando Fernandez | Argentina</p>
         <p id="lastModified"></p>
+        <p><a href="references.html">References / Credits</a> | <a href="contact.html">Contact</a></p>
     </footer>
 
   <script>
     document.getElementById("currentyear").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
   </script>
-    <script src="scripts/main.js" defer></script>
-    <script src="scripts/argentina.js" defer></script>
+    <script src="./main/main.js" defer></script>
+    <script src="./main/app.js" defer></script>
 </body>
 </html>

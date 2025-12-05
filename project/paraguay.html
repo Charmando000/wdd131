@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paraguay</title>
+    <meta name="description" content="Background and personal memories from Asunción, Paraguay — culture, food, and family life.">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="preload" href="./styles/styles.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -15,22 +16,24 @@
     <header>
         <h1>Paraguay</h1>
         <button id="menu" aria-label="Menu">☰</button>
-        <nav class="navigation">
-            <a href="index.html">Inicio</a>
-            <a href="paraguay.html">Paraguay</a>
-            <a href="argentina.html">Argentina</a>
-            <a href="brasil.html">Brasil</a>
+        <nav class="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="paraguay.html">Paraguay</a></li>
+                <li><a href="argentina.html">Argentina</a></li>
+                <li><a href="brasil.html">Brazil</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
 
         <div class="country-img">
-            <img src="images/paraguay.webp" alt="Landscape of Argentina">
+            <img loading="lazy" src="images/paraguay.webp" alt="Landscape of Paraguay">
         </div>
 
     <div class="country-info">
-        <h2>About Paraguay</h2>
+            <h2>About Paraguay</h2>
         <p>
             Paraguay, officially known as the Republic of Paraguay, is a landlocked country located in the heart of South America.
             It is bordered by Argentina to the south and southwest, Brazil to the east and northeast, and Bolivia to the northwest.
@@ -42,7 +45,7 @@
     </div>
 
     <div class="my-experience">
-        <h2>My Life in Paraguay</h2>
+            <h2>My Life in Paraguay</h2>
         <p>
             I was born and raised in Asunción, the capital city of Paraguay.
             Growing up in Paraguay gave me a deep appreciation for my country's culture and traditions.
@@ -57,11 +60,13 @@
     <footer>
         <p>&copy; <span id="currentyear"></span> Armando Fernandez | Paraguay</p>
         <p id="lastModified"></p>
+        <p><a href="references.html">References / Credits</a> | <a href="contact.html">Contact</a></p>
     </footer>
 
-  <script>
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
-  </script>
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+    </script>
+    <script src="./main/app.js" defer></script>
 </body>
 </html>

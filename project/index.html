@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My history in thres countrys</title>
+    <title>My history in three countries</title>
+    <meta name="description" content="Personal travel stories and experiences living in Paraguay, Argentina and Brazil by Armando Fernandez.">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/styles-large.css">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -17,10 +18,10 @@
         <button id="menu" aria-label="Menu">☰</button>
         <nav class="navigation">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="paraguay.html">Paraguay</a></li>
                 <li><a href="argentina.html">Argentina</a></li>
-                <li><a href="brasil.html">Brasil</a></li>
+                <li><a href="brasil.html">Brazil</a></li>
             </ul>
         </nav>
     </header>
@@ -29,29 +30,29 @@
     <main>
 
         <div class="country-img">
-            <img src="images/paraguay,argentina,brasil.webp" alt="Landscape of Argentina">
+            <img loading="lazy" src="images/paraguay,argentina,brasil.webp" alt="Collage: Paraguay, Argentina and Brazil">
         </div>
 
         <div class="introduction">
             <h2>Introduction</h2>
-            <p>I'am Armando Fernandez and i live in this thres country but paraguay
-            is my home country i was born in asuncion paraguay and i lived there for
-            18 years after that i served a mission in argentina for 2 years then i came back
-            to paraguay and lived there for 1 year after that I moved to brazil where now I live
-            </p>
-            <p>In this website i will share my experience living in this thres country
-            and how is the culture the food and the people of each country </p>
+            <p>I'm Armando Fernández. I have lived in three countries: Paraguay (my home country), Argentina, and Brazil. I was born in Asunción, Paraguay and lived there for 18 years. I served a mission in Argentina for two years, returned to Paraguay for one year, and later moved to Brazil where I currently live.</p>
+            <p>On this website I share my experiences living in these three countries — their cultures, foods, and people.</p>
         </div>
+
+        <!-- Dynamic country cards (rendered by main/app.js) -->
+        <section id="countries" aria-label="Country summaries"></section>
     </main>
 
     <footer>
         <p>&copy; <span id="currentyear"></span> Armando Fernandez | Home</p>
         <p id="lastModified"></p>
+        <p><a href="references.html">References / Credits</a> | <a href="contact.html">Contact</a></p>
     </footer>
 
-  <script>
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
-  </script>
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+    </script>
+    <script src="./main/app.js" defer></script>
 </body>
 </html>

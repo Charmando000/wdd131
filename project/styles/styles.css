@@ -1,3 +1,14 @@
+:root{
+    --max-width: 980px;
+    --page-padding: 1rem;
+    --accent: #57cfff;
+    --muted: #6b7280;
+    --card-bg: #fff;
+    --h1-size: clamp(1.5rem, 2.2vw + 1rem, 2.25rem);
+    --h2-size: clamp(1.1rem, 1.4vw + 0.8rem, 1.5rem);
+    --base-size: 16px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +18,12 @@
 /* === GLOBAL STYLES === */
 body {
     font-family: "Roboto", sans-serif;
+    font-size: var(--base-size);
     line-height: 1.6;
-    padding: 0 1rem;
-    max-width: 900px;
-    margin: auto;
+    padding: 0 var(--page-padding);
+    max-width: var(--max-width);
+    margin: 0 auto 2rem;
+    color: #111827;
 }
 
 body.index {
@@ -46,59 +59,101 @@ body.brasil header {
 
 /* === HEADER === */
 header {
-  background-color: #2e5984;
-  color: white;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+    background-color: #2e5984;
+    color: white;
+    padding: 1rem 1rem 0.8rem;
+    display: flex;
+    flex-direction: column; /* title on top, nav under */
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+/* Header title */
+header h1 {
+    font-size: var(--h1-size);
+    line-height: 1.05;
+    margin: 0.5rem 0 0;
+    text-align: center;
+    font-weight: 700;
 }
 
 #menu {
     background: none;
     border: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
     cursor: pointer;
     display: block;
+    /* place menu button visually in top-right while keeping header column layout */
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    padding: 0.15rem 0.3rem;
 }
 
 .navigation {
+    /* Off-canvas left panel by default */
     display: flex;
     flex-direction: column;
-    background-color: white;
-    position: absolute;
-    top: 60px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
-    transition: 0.3s ease-in-out;
-    overflow: hidden;
-    max-height: 0;
+    height: 100%;
+    width: 280px;
+    transform: translateX(-110%);
+    transition: transform 240ms ease-in-out;
+    box-shadow: 4px 0 18px rgba(0,0,0,0.16);
+    z-index: 1001;
+    padding-top: 3.5rem; /* leave space for header */
 }
 
 .navigation.open {
-    display: flex;
-    max-height: 400px;
+    transform: translateX(0);
 }
 
-.navigation a {
+.navigation a, .navigation li a {
     text-decoration: none;
-    color: black;
-    padding: 1rem;
-    border-top: 1px solid #ccc;
+    color: #222;
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid #eee;
+    display: block; /* make entire area clickable */
 }
+
+.navigation li { padding: 0.15rem 0; }
+.navigation li + li { margin-top: 0.6rem; }
+
+/* for nav when visible as static (header) add extra top spacing */
+header > nav.navigation { margin-top: 0.75rem; }
 
 .navigation a:hover {
-    background-color: rgb(red, green, blue);
+    background-color: rgba(87, 207, 255, 0.12);
+}
+
+.navigation a:focus-visible {
+    outline: 3px solid rgba(87,207,255,0.28);
+    outline-offset: 2px;
+    background-color: rgba(87,207,255,0.08);
 }
 
 
-nav ul {
+/* top header navigation (desktop / wide screens) */
+header > nav > ul {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
     list-style: none;
     margin-top: 1rem;
+}
+
+/* off-canvas navigation lists should be vertical */
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
@@ -120,6 +175,22 @@ nav a:hover {
     margin: 1rem auto;
     object-fit: cover;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+main { padding: 1rem 0; }
+
+/* headings */
+h2 { font-size: var(--h2-size); margin-bottom: 0.65rem; }
+h3 { font-size: 1rem; }
+
+/* more comfortable text blocks */
+.country-info, .my-experience, .favorite-foods { padding: 1.25rem; }
+
+/* small screens slight layout tweaks */
+@media (max-width: 600px){
+    :root{ --page-padding: 0.9rem; }
+    body{ margin-bottom: 2.5rem; }
+    header h1 { font-size: 1.25rem; }
 }
 
 /* === CONTENT BLOCKS === */
@@ -161,3 +232,72 @@ footer p {
     color: #555;
     font-size: 0.9rem;
 }
+
+/* === COUNTRY CARDS & INTERACTION === */
+.country-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.country-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 22px rgba(0,0,0,0.12);
+}
+.country-card img {
+    width: 160px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+.card-body { flex: 1; }
+.card-body h3 { margin: 0 0 0.4rem; }
+.card-body p { margin: 0.2rem 0; }
+
+/* Favorite button */
+.fav {
+    display: inline-block;
+    background: #0b5ed7; /* strong blue */
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.7rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 0.6rem;
+}
+.fav:hover { background: #084aa8; box-shadow: 0 8px 18px rgba(11,94,215,0.12); }
+.fav.active { background: #198754; }
+.fav:focus-visible { outline: 3px solid rgba(9,132,255,0.28); outline-offset: 3px; }
+
+/* Mobile: stack cards */
+@media (max-width: 600px) {
+    .country-card { flex-direction: column; }
+    .country-card img { width: 100%; height: auto; }
+
+    /* mobile header adjustments */
+    header { padding: 1.25rem 1rem 0.8rem; }
+    header h1 { font-size: 1.25rem; margin-bottom: 0.6rem; }
+    #menu { top: 0.9rem; right: 0.9rem; }
+    /* make off-canvas menu links more roomy */
+    .navigation a, .navigation li a { padding: 1rem 1.15rem; }
+    .navigation ul { gap: 0.35rem; }
+}
+
+/* overlay that appears when nav is open */
+.menu-overlay {
+    position: fixed;
+    inset: 0; /* top/right/bottom/left: 0 */
+    background: rgba(0,0,0,0.35);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 180ms ease-in-out, visibility 0ms linear 180ms;
+}
+.menu-overlay.visible { opacity: 1; visibility: visible; transition-delay: 0s; }

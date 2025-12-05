@@ -4,10 +4,29 @@
     }
 
     .navigation {
+        /* Static top nav on larger screens */
         display: flex;
         position: static;
+        transform: none !important;
         flex-direction: row;
-        max-height: none;
+        align-items: center;
+        height: auto;
+        background: transparent;
+        box-shadow: none;
+        padding-top: 0;
+        z-index: auto;
+    }
+
+    /* make sure header nav under title has comfortable spacing on larger screens */
+    header > nav.navigation { margin-top: 0.65rem; }
+
+    /* when navigation is static on large screens, ensure its internal list lays out horizontally */
+    .navigation ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        align-items: center;
+        margin-top: 0;
     }
 
     .navigation ul {
@@ -24,4 +43,18 @@
     #menu {
         display: block;
     }
+}
+
+/* hide overlay on large screens */
+.menu-overlay { display: none; }
+
+/* Grid for country cards on larger screens */
+@media (min-width: 900px) {
+    #countries {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem 1.25rem;
+        align-items: start;
+    }
+    .country-card img { width: 180px; height: 120px; }
 }
